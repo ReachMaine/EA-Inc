@@ -1,0 +1,21 @@
+/* media css */
+
+@media only screen and (max-width: 768px)  {
+
+	.widget .textwidget .eia-right-rail,
+	.widget .textwidget .eai-right-rail {
+		text-align: center;
+	}
+
+}
+/* at full size */
+@media only screen and (min-width: 1200px) {
+
+	.widget .textwidget .eia-right-rail,
+	.widget .textwidget .eai-right-rail {
+		width: 300px;
+		margin-left: -30px;
+		//border: 1px solid black;
+	}
+
+}

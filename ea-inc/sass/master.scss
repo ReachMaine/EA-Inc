@@ -1,0 +1,72 @@
+/*
+Theme Name: EA Inc
+Theme URI: http://reachmaine.com
+Description: This is a child theme for Flatsome for the Ellsworth Americen Publishing, Inc
+Author: zig
+Template: flatsome
+Version: 1.8
+*/
+ 
+@import url("../flatsome/css/foundation.css");
+@import "partials/settings";
+@import "partials/functions"; 
+
+ 
+/* =Theme customization starts here */
+.mobile-menu.show-for-small {
+	a .icon-menu {
+		color: #C6C6C6; 
+	}
+}
+.logo-center #masthead #logo {
+	width: 100%!important;
+}
+#masthead #logo a {
+	max-width: 100%!important;
+}
+#logo a img {
+	max-height: none!important;
+}
+.widget .textwidget .eia-right-rail,
+.widget .textwidget .eai-right-rail  {
+	padding-bottom: 15px;
+}
+footer {
+	.footer.dark {
+		.widget {
+			margin-bottom: 10px;
+		}
+		padding-top: 10px;
+		background-color: $footer-widgets-background!important;
+		.columns {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+		.widget-title {
+			text-align: center;
+			color: $titleFontColor;
+			font-size: 14px;
+			//font-weight: normal;
+		}
+		.tx-div.small {
+			width: 100%;
+			background-color: #444;
+			opacity: 1.0;
+			margin-bottom: 10px;
+			margin-top: 10px;
+			/* opacity: inherit; */
+			// opacity: none;
+		}
+		a {
+			font-size: 14px;
+			color: #DDD;
+			line-height: 20px;
+		}
+	}
+	.absolute-footer.dark {
+		background-color: #000;
+	}
+
+}
+
+@import "partials/media"; /* leave this as the last thing in the file s.t. it overides above */

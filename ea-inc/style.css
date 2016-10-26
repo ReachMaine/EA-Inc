@@ -1,0 +1,94 @@
+@import url("../flatsome/css/foundation.css");
+
+/*
+
+Theme Name: EA Inc
+
+Theme URI: http://reachmaine.com
+
+Description: This is a child theme for Flatsome for the Ellsworth American Publishing, Inc
+
+Author: zig
+
+Template: flatsome
+
+Version: 1.8
+
+*/
+
+/* Colors ---------------------------------------------- */
+
+/* Typography ------------------------------------------ */
+
+/* Custom Functions ------------------------------------ */
+
+/* ===================================================== */
+
+/* ===================================================== */
+
+/* Media Queries --------------------------------------- */
+
+/* ===================================================== */
+
+/* Media Queries Settings ------------------------------ */
+
+/* Media Query Function -------------------------------- */
+
+/* How To Use ------------------------------------------ */
+
+/*
+
+ * #wrapper {
+
+ *    margin: 0 auto;
+
+ *     
+
+ *    @include respond-to(handheld) {
+
+ *       width: 100%;
+
+ *    }
+
+ *     
+
+ *    @include respond-to(tablet) {
+
+ *       width: 98%;
+
+ *    }
+
+ *     
+
+ *    @include respond-to(desktop) {
+
+ *       width: 92%;
+
+ *    }
+
+ * }
+
+ */
+
+/* End Media Queries ----------------------------------- */
+
+/* ===================================================== */
+
+/* =Theme customization starts here */
+
+.logo-center #masthead #logo {
+
+  width: 100% !important; }
+
+
+
+#masthead #logo a {
+
+  max-width: 100% !important; }
+
+
+
+#logo a img {
+
+  max-height: none !important; }
+
