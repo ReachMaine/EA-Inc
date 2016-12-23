@@ -1,94 +1,94 @@
 @import url("../flatsome/css/foundation.css");
-
 /*
-
 Theme Name: EA Inc
-
 Theme URI: http://reachmaine.com
-
-Description: This is a child theme for Flatsome for the Ellsworth American Publishing, Inc
-
+Description: This is a child theme for Flatsome for the Ellsworth Americen Publishing, Inc
 Author: zig
-
 Template: flatsome
-
 Version: 1.8
-
 */
-
 /* Colors ---------------------------------------------- */
-
 /* Typography ------------------------------------------ */
-
 /* Custom Functions ------------------------------------ */
-
 /* ===================================================== */
-
 /* ===================================================== */
-
 /* Media Queries --------------------------------------- */
-
 /* ===================================================== */
-
 /* Media Queries Settings ------------------------------ */
-
 /* Media Query Function -------------------------------- */
-
 /* How To Use ------------------------------------------ */
-
 /*
-
  * #wrapper {
-
  *    margin: 0 auto;
-
  *     
-
  *    @include respond-to(handheld) {
-
  *       width: 100%;
-
  *    }
-
  *     
-
  *    @include respond-to(tablet) {
-
  *       width: 98%;
-
  *    }
-
  *     
-
  *    @include respond-to(desktop) {
-
  *       width: 92%;
-
  *    }
-
  * }
-
  */
-
 /* End Media Queries ----------------------------------- */
-
 /* ===================================================== */
-
+/* styling for gravity forms */
 /* =Theme customization starts here */
+.mobile-menu.show-for-small a .icon-menu {
+  color: #C6C6C6; }
 
 .logo-center #masthead #logo {
-
   width: 100% !important; }
 
-
-
 #masthead #logo a {
-
   max-width: 100% !important; }
 
-
-
 #logo a img {
-
   max-height: none !important; }
 
+.widget .textwidget .eia-right-rail,
+.widget .textwidget .eai-right-rail {
+  padding-bottom: 15px; }
+
+footer .footer.dark {
+  padding-top: 10px;
+  background-color: #333333 !important; }
+  footer .footer.dark .widget {
+    margin-bottom: 10px; }
+  footer .footer.dark .columns {
+    padding-left: 25px;
+    padding-right: 25px; }
+  footer .footer.dark .widget-title {
+    text-align: center;
+    color: #1e73be;
+    font-size: 14px; }
+  footer .footer.dark .tx-div.small {
+    width: 100%;
+    background-color: #444;
+    opacity: 1.0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    /* opacity: inherit; */ }
+  footer .footer.dark a {
+    font-size: 14px;
+    color: #DDD;
+    line-height: 20px; }
+footer .absolute-footer.dark {
+  background-color: #000; }
+
+/* media css */
+@media only screen and (max-width: 768px) {
+  .widget .textwidget .eia-right-rail,
+  .widget .textwidget .eai-right-rail {
+    text-align: center; } }
+/* at full size */
+@media only screen and (min-width: 1200px) {
+  .widget .textwidget .eia-right-rail,
+  .widget .textwidget .eai-right-rail {
+    width: 300px;
+    margin-left: -30px; } }
+/* leave this as the last thing in the file s.t. it overides above */

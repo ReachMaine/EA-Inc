@@ -6,16 +6,17 @@ Author: zig
 Template: flatsome
 Version: 1.8
 */
- 
+
 @import url("../flatsome/css/foundation.css");
 @import "partials/settings";
-@import "partials/functions"; 
+@import "partials/functions";
+@import "partials/gravityforms";
 
- 
+
 /* =Theme customization starts here */
 .mobile-menu.show-for-small {
 	a .icon-menu {
-		color: #C6C6C6; 
+		color: #C6C6C6;
 	}
 }
 .logo-center #masthead #logo {

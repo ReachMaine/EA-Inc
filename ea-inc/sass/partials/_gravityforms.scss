@@ -1,0 +1,11 @@
+/* ****  styling for gravity forms **** */
+.gform_wrapper {
+    .gf_step:not(.gf_step_active) {
+        opacity: .5!important;
+    }
+    .gf_step.gf_step_active {
+        border-bottom: 2px solid #c1c1c1;
+        padding-bottom: 23px;
+    }
+}
+/* **** End of Gravity forms styling **** */
