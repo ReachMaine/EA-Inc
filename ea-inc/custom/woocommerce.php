@@ -21,6 +21,6 @@ function custom_woocommerce_checkout_fields( $fields ) {
 add_action( 'woocommerce_email_before_order_table', 'add_order_email_instructions', 10, 2 );
 function add_order_email_instructions( $order, $sent_to_admin ) {
   if ( ! $sent_to_admin ) {
-       echo '<p>If your order includes a digital subscription, you will receive a email with your password.</p>';
+       echo '<p>If your order includes a digital subscription, you will receive a separate email with your password by the 17th.</p>';
   }
 }
