@@ -3,9 +3,17 @@
 $linkcolor: #a62425;
 $titleFontColor: #1E73BE; //<- blue //#2BB673; <- green  //#a62425;
 $footer-widgets-background: #333;
-// Background colors: 
-
-$bkgoundContent: #FFFFFF; // 
+// Background colors:
+$primary-color: #1e73be;
+$bkgoundContent: #FFFFFF; //
 $menuBarbkg: #D14719; //
 
+
 /* Typography ------------------------------------------ */
+.eai-boxed-column {
+    .vc_column-inner > .wpb_wrapper {
+        border: 1px solid #b5b5b5;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

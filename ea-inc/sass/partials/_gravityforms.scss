@@ -7,5 +7,20 @@
         border-bottom: 2px solid #c1c1c1;
         padding-bottom: 23px;
     }
+    .gfield.eai-hide-extensions {
+        #extensions_message {
+            display: none;
+        }
+    }
+    .gform_page_footer {
+        .gform_save_link { // save and continue button
+            float: right;
+            padding-top: 0.8125em;
+            padding-bottom: 0.75em;
+            padding-right: 1.5em;
+            padding-left: 1.5em;
+            border: 2px solid $primary-color;
+        }
+    }
 }
 /* **** End of Gravity forms styling **** */
