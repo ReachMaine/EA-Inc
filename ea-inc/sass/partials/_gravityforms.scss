@@ -12,6 +12,15 @@
             display: none;
         }
     }
+    .gform_body{
+      .field_sublabel_above .ginput_complex.ginput_container label {//styling labels in form body
+        font-size: 16px;
+        font-weight: 700;
+      }
+      input[type="checkbox"] {
+        margin-bottom: 0px;
+      }
+    }
     .gform_page_footer {
         .gform_save_link { // save and continue button
             float: right;
