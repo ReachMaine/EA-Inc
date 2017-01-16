@@ -1,11 +1,15 @@
 /* ****  styling for gravity forms **** */
 .gform_wrapper {
+    background-color: #e5ebf1;
+    padding: 15px;
+    border: 1px solid #1e73be;
     .gf_step:not(.gf_step_active) {
         opacity: .5!important;
     }
     .gf_step.gf_step_active {
         border-bottom: 2px solid #c1c1c1;
         padding-bottom: 23px;
+        font-weight: bold;
     }
     .gfield.eai-hide-extensions {
         #extensions_message {
