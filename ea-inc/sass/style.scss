@@ -32,6 +32,18 @@ Version: 1.8
 .widget .textwidget .eai-right-rail  {
 	padding-bottom: 15px;
 }
+
+.eai-boxed-column{ //styling three boxes on Obits & Death Notices page
+		.wpb_wrapper {
+		border-radius: 10px;
+		border-width: 3px;
+		padding: 10px;
+		}
+		.vc_column-inner {
+			padding-top: 0px;
+		}
+	}
+
 footer {
 	.footer.dark {
 		.widget {
