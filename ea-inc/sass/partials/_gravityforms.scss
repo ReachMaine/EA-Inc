@@ -1,5 +1,5 @@
 /* ****  styling for gravity forms **** */
-.gform_wrapper {
+body .gform_wrapper {
     background-color: #e5ebf1;
     padding: 15px;
     border: 1px solid #1e73be;
@@ -11,16 +11,33 @@
         padding-bottom: 23px;
         font-weight: bold;
     }
-    .gfield.eai-hide-extensions {
-        #extensions_message {
-            display: none;
-        }
-    }
-    .gform_body{
+
+    .gform_body {
       .field_sublabel_above .ginput_complex.ginput_container label {//styling labels in form body
         font-size: 16px;
         font-weight: 700;
       }
+      ul.gform_fields {  // fields
+        li.gfield {
+          .ginput_container /*,
+          .ginput_container.ginput_container_phone,
+          .ginput_container.ginput_container_email,
+          .ginput_container.ginput_container_text,
+          .ginput_container.ginput_container_list.ginput_list,
+          .ginput_container.ginput_container_checkbox */ {
+              margin-top: 0px!important; // getting title closer to input
+            }
+            .ginput_container.ginput_container_list.ginput_list:after {
+              content: "use plus icon to add another";
+              font-style: italic;
+              display: block;
+              margin-top: -14px;
+
+            }
+        }
+      }
+
+
       input[type="checkbox"] {
         margin-bottom: 0px;
       }
@@ -35,5 +52,18 @@
             border: 2px solid $primary-color;
         }
     }
+}
+
+/* at full size */
+@media only screen and (min-width: 1024px) {
+    body .gform_wrapper   .gform_body  {
+        ul.gform_fields {
+          li.gfield {
+            .ginput_container.ginput_container_list.ginput_list:after {
+              text-align: right;
+            }
+          }
+        }
+      }
 }
 /* **** End of Gravity forms styling **** */
