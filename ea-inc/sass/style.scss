@@ -44,6 +44,17 @@ Version: 1.8
 		}
 	}
 
+.eai-boxed-column .vc_column-inner .wpb_wrapper {
+	flex-basis: 100%;
+	.wpb_button, .wpb_content_element, ul.wpb_thumbnails-fluid>li {
+		margin-bottom: 10px;
+	}
+	}
+
+.vc_custom_1485269206965 .wpb_text_column.wpb_content_element { //removing margin between intro text and three boxes
+	margin-bottom: 0px;
+}
+
 footer {
 	.footer.dark {
 		.widget {

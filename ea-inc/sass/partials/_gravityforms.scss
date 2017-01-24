@@ -32,7 +32,11 @@ body .gform_wrapper {
               font-style: italic;
               display: block;
               margin-top: -14px;
+              font-size: .8em;
 
+            }
+            .gsection_description, .gfield_description {
+              font-size: 1em;
             }
         }
       }
