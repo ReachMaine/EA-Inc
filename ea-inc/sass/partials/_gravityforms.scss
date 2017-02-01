@@ -41,6 +41,14 @@ body .gform_wrapper {
         }
       }
 
+      .eainc-file-upload-box .gform_drop_area {
+        padding: 60px;
+      }
+
+      img.gform_delete + strong::after{
+        content: "(Success)"
+      }
+
 
       input[type="checkbox"] {
         margin-bottom: 0px;
