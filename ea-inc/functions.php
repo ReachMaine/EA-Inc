@@ -1,6 +1,6 @@
 <?php
 	require_once(get_stylesheet_directory().'/custom/woocommerce.php');
-	
+
 	$cwk_thumbimg = array(200, 999); // size of featured image in archive/category blog
 	$cwk_postimg = array(200, 999); // size of featured image on single post.
 	add_image_size( 'cwk-slider', 1420, 447, true ); // Slider
@@ -23,7 +23,7 @@
 	}
 
 	/* recommended from woothemes  -  new server with old mod_security settings */
-	add_action( 'wp_enqueue_scripts', 'custom_frontend_scripts' );
+	//add_action( 'wp_enqueue_scripts', 'custom_frontend_scripts' );
 	function custom_frontend_scripts() {
 
 		global $post, $woocommerce;

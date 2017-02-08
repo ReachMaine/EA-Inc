@@ -65,6 +65,13 @@ body .gform_wrapper {
         }
     }
 }
+.gform_confirmation_wrapper  {
+    border: 2px solid green;
+    padding: 16px;
+    .gform_confirmation_message {
+        line-height: 1.2em;
+    }
+}
 
 /* at full size */
 @media only screen and (min-width: 1024px) {
