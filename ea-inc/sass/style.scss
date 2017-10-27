@@ -92,5 +92,27 @@ footer {
 	}
 
 }
-
+.product-page {
+	.product {
+		.product-gallery {
+			.callout.style1.large  {
+				display: none;
+			}
+		}
+		.price {
+			del {
+				display: block;
+				padding-bottom: 10px;
+			}
+		}
+	}
+}
+.products {
+	.price {
+		del {
+			display: block;
+			padding-bottom: 10px;
+		}
+	}
+}
 @import "partials/media"; /* leave this as the last thing in the file s.t. it overides above */

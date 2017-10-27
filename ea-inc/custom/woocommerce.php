@@ -25,10 +25,27 @@ function add_order_email_instructions( $order, $sent_to_admin ) {
   }
 }
 add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
-
 	function woo_remove_product_tabs( $tabs ) {
 		unset( $tabs['additional_information'] );  	// Remove the additional information tab
 
 		return $tabs;
 
 	}
+
+  /*  change the out of stock notifications for early bird & pj sale
+  */
+  //add_filter('woocommerce_get_availability_text', 'reach_get_avail_text', 10, 2);
+
+  function reach_get_avail_text($text, $product) {
+      $id = $product->get_id();
+
+      if (!$product->is_in_stock()) {
+          if ($id == 1505) {
+            $text = 'Available 6am-8am<br> Nov 11th'; // islander pj sale
+          }
+          if ($id == 1483) {
+            $text = 'Available 6am-8am <br> Nov 4th'; // american early bird sale
+          }
+      }
+      return $text;
+  }
