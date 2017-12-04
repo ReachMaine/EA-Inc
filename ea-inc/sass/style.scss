@@ -105,6 +105,11 @@ footer {
 				padding-bottom: 10px;
 			}
 		}
+		form.cart {
+			label.screen-reader-text {
+				display: none;
+			}
+		}
 	}
 }
 .products {
