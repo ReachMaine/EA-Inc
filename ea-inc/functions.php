@@ -1,5 +1,6 @@
 <?php
 	require_once(get_stylesheet_directory().'/custom/woocommerce.php');
+	require_once(get_stylesheet_directory().'/custom/gravityforms.php');
 
 	$cwk_thumbimg = array(200, 999); // size of featured image in archive/category blog
 	$cwk_postimg = array(200, 999); // size of featured image on single post.
