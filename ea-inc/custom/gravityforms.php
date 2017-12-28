@@ -83,3 +83,20 @@ if (!function_exists('eai_gravityview_today')) {
 	}
 }
 add_shortcode( 'gravityview_today', 'eai_gravityview_today' );
+
+if (!function_exists('eai_gravityview_tomorrow')) {
+	function eai_gravityview_tomorrow( $atts ) {
+		$atts = shortcode_atts( array(
+			'id' => '3015',
+			'searchfield' => '2',
+		), $atts, 'gravityview_tomorrow' );
+    $tomorrow =  new DateTime('tomorrow');
+    $tomorrow_str = $tomorrow->format("Y-m-d");
+    $outstr = "";
+    $outstr .= "<h3> Cancellations for ".$tomorrow_str."</h3>";
+    $shortcode_str = '[gravityview id="'.$atts['id'].'" search_field="'.$atts['searchfield'].'" search_value="'.$tomorrow_str.'"]' ;
+    $outstr .=  do_shortcode($shortcode_str);
+		return "{$outstr}";
+	}
+}
+add_shortcode( 'gravityview_tomorrow', 'eai_gravityview_tomorrow' );
