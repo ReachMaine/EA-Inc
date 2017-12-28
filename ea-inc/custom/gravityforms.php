@@ -65,3 +65,21 @@ add_action( 'gform_after_submission_5', 'eai_add_email', 10, 2 );
 function eai_add_email($entry, $form) {
   // just a stub for now.
 }
+
+// add the shortcode to search for today.
+
+if (!function_exists('eai_gravityview_today')) {
+	function eai_gravityview_today( $atts ) {
+		$atts = shortcode_atts( array(
+			'id' => '3015',
+			'searchfield' => '2',
+		), $atts, 'gravityview_today' );
+    $today_str = date("Y-m-d") ;
+    $outstr = "";
+    $outstr .= "<h3> Cancellations for ".$today_str."</h3>";
+    $shortcode_str = '[gravityview id="'.$atts['id'].'" search_field="'.$atts['searchfield'].'" search_value="'.$today_str.'"]' ;
+    $outstr .=  do_shortcode($shortcode_str);
+		return "{$outstr}";
+	}
+}
+add_shortcode( 'gravityview_today', 'eai_gravityview_today' );

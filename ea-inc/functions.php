@@ -25,7 +25,7 @@
 
 	/* recommended from woothemes  -  new server with old mod_security settings */
 	//add_action( 'wp_enqueue_scripts', 'custom_frontend_scripts' );
-	function custom_frontend_scripts() {
+	/* zxout, just in case....function custom_frontend_scripts() {
 
 		global $post, $woocommerce;
 
@@ -33,6 +33,6 @@
 		wp_deregister_script( 'jquery-cookie' );
 		wp_register_script( 'jquery-cookie', $woocommerce->plugin_url() . '/assets/js/jquery-cookie/jquery_cookie' . $suffix . '.js', array( 'jquery' ), '1.3.1', true );
 
-	}
+	} */
 
 ?>
