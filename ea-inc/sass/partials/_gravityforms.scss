@@ -1,4 +1,4 @@
-/* ****  styling for gravity forms **** */
+/* ****  styling for gravity forms  & gravityview **** */
 body .gform_wrapper {
     background-color: #e5ebf1;
     padding: 15px;
@@ -71,6 +71,18 @@ body .gform_wrapper {
     .gform_confirmation_message {
         line-height: 1.2em;
     }
+}
+.gv-table-container {
+  .gv-table-view {
+    tbody {
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+    }
+    tfoot {
+      display: none;
+    }
+  }
+
 }
 
 /* at full size */
