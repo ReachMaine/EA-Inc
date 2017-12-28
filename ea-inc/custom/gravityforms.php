@@ -1,7 +1,7 @@
 <?php
 /* custom programing for gravity forms */
 
-add_filter( 'gform_validation_1', 'eai_validate_useremail' );
+add_filter( 'gform_validation_6', 'eai_validate_useremail' );
 function eai_validate_useremail ( $validation_result) {
     // take from example at https://docs.gravityforms.com/using-the-gravity-forms-gform-validation-hook/
     /* validate_email */
@@ -60,4 +60,8 @@ function eai_validate_useremail ( $validation_result) {
       } // end not okay.
     } // end for loop
     return $validation_result;
+}
+add_action( 'gform_after_submission_5', 'eai_add_email', 10, 2 );
+function eai_add_email($entry, $form) {
+  // just a stub for now.
 }
