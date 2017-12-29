@@ -74,9 +74,11 @@ if (!function_exists('eai_gravityview_today')) {
 			'id' => '3015',
 			'searchfield' => '2',
 		), $atts, 'gravityview_today' );
-    $today_str = date("Y-m-d") ;
+    $today_dt = new DateTime('today');
+    $today_str = $today_dt->format("Y-m-d");
+    $today_display = $today_dt->format("l, F j,Y"); // friday, December 21, 2017
     $outstr = "";
-    $outstr .= "<h3> Cancellations for ".$today_str."</h3>";
+    $outstr .= "<h3> Cancellations for ".$today_display."</h3>";
     $shortcode_str = '[gravityview id="'.$atts['id'].'" search_field="'.$atts['searchfield'].'" search_value="'.$today_str.'"]' ;
     $outstr .=  do_shortcode($shortcode_str);
 		return "{$outstr}";
@@ -92,8 +94,9 @@ if (!function_exists('eai_gravityview_tomorrow')) {
 		), $atts, 'gravityview_tomorrow' );
     $tomorrow =  new DateTime('tomorrow');
     $tomorrow_str = $tomorrow->format("Y-m-d");
+    $tomorrow_str_display = $tomorrow->format("l, F j,Y");
     $outstr = "";
-    $outstr .= "<h3> Cancellations for ".$tomorrow_str."</h3>";
+    $outstr .= "<h3> Cancellations for ".$tomorrow_str_display."</h3>";
     $shortcode_str = '[gravityview id="'.$atts['id'].'" search_field="'.$atts['searchfield'].'" search_value="'.$tomorrow_str.'"]' ;
     $outstr .=  do_shortcode($shortcode_str);
 		return "{$outstr}";
