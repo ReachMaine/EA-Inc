@@ -80,6 +80,7 @@ if (!function_exists('eai_gravityview_today')) {
     $outstr = "";
     $outstr .= "<h3> Cancellations for ".$today_display."</h3>";
     $shortcode_str = '[gravityview id="'.$atts['id'].'" search_field="'.$atts['searchfield'].'" search_value="'.$today_str.'"]' ;
+    //$outstr .= $today_str;
     $outstr .=  do_shortcode($shortcode_str);
 		return "{$outstr}";
 	}
@@ -98,6 +99,7 @@ if (!function_exists('eai_gravityview_tomorrow')) {
     $outstr = "";
     $outstr .= "<h3> Cancellations for ".$tomorrow_str_display."</h3>";
     $shortcode_str = '[gravityview id="'.$atts['id'].'" search_field="'.$atts['searchfield'].'" search_value="'.$tomorrow_str.'"]' ;
+    //$outstr .= $tomorrow_str;
     $outstr .=  do_shortcode($shortcode_str);
 		return "{$outstr}";
 	}
