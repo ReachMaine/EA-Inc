@@ -77,6 +77,9 @@ body .gform_wrapper {
     tbody {
       border-top: 1px solid gray;
       border-bottom: 1px solid gray;
+      p {
+        margin-bottom: 0px;
+      }
     }
     tfoot {
       display: none;
