@@ -73,14 +73,28 @@ function eai_add_email($entry, $form) {
   if (!$userid) {
       $dbg_out .= "new email: ".$new_email;
      // new user  -- try first name last name combo as username
-     $submitted_name = rgar($entry, '1.3').rgar($entry, '1.6'); // firstname+lastname
-     $dbg_out .= "submitted name: $submitted_name";
-     $random_password = wp_generate_password();
-     $userid = wp_create_user( $submitted_name, $random_password, $new_email, "" );
-     if ($userid) {
+     $first_name = rgar($entry, '1.3');
+     $last_name = rgar($entry, '1.6');
+     $username =  $first_name.$last_name.rand(0,9999); // firstname+lastname
+     $dbg_out .= "submitted name: $username";
+     $userdata = array(
+        'user_login'  =>  $username,
+        'user_email' => $new_email,
+        'user_pass'   =>  wp_generate_password(),
+        'first_name' => rgar($entry, '1.3'),
+        'last_name' => rgar($entry, '1.6'),
+        'display_name' => rgar($entry, '4'),
+        'nickname' => rgar($entry, '4'),
+        'role' => ''
+     );
+     $userid = wp_insert_user($userdata);
+     //$userid = wp_create_user( $submitted_name, $random_password, $new_email, "" );
+     //On success
+      if ( ! is_wp_error( $userid ) ) {
        $dbg_out .= "created user with id: {$userid} ";
      } else {
-       $dbg_out .= "failed to create user with id: {$userid} ";
+       $dbg_out .= "failed to create user.";
+       echo "<pre>"; var_dump($userid); echo "</pre>";
      }
   }
   if ($userid) { // got here with a user (new or existing)
