@@ -1,6 +1,6 @@
 <?php
 /* custom programing for gravity forms */
-
+// validated email for cancellation submissions form
 add_filter( 'gform_validation_6', 'eai_validate_useremail' );
 function eai_validate_useremail ( $validation_result) {
     // take from example at https://docs.gravityforms.com/using-the-gravity-forms-gform-validation-hook/
@@ -61,13 +61,60 @@ function eai_validate_useremail ( $validation_result) {
     } // end for loop
     return $validation_result;
 }
+
+//   add email for registration form
 add_action( 'gform_after_submission_5', 'eai_add_email', 10, 2 );
 function eai_add_email($entry, $form) {
-  // just a stub for now.
+  $dbg_out = "";
+  // get the email from the entry (field number 2)
+  $new_email = rgar( $entry, '2' );
+  $userid = email_exists( $new_email );
+
+  if (!$userid) {
+      $dbg_out .= "new email: ".$new_email;
+     // new user  -- try first name last name combo as username
+     $submitted_name = rgar($entry, '1.3').rgar($entry, '1.6'); // firstname+lastname
+     $dbg_out .= "submitted name: $submitted_name";
+     $random_password = wp_generate_password();
+     $userid = wp_create_user( $submitted_name, $random_password, $new_email, "" );
+     if ($userid) {
+       $dbg_out .= "created user with id: {$userid} ";
+     } else {
+       $dbg_out .= "failed to create user with id: {$userid} ";
+     }
+  }
+  if ($userid) { // got here with a user (new or existing)
+      $dbg_out .= "yep: ".$new_email;
+      if (is_user_member_of_blog($userid)) {
+        $dbg_out .= " member. - done";
+      } else {
+        $dbg_out .= " not a member ";
+        // add user to this blog...
+        $blog_id = get_current_blog_id();
+        if (add_user_to_blog( $blog_id, $userid ) ) { // add user with no role.
+          // sucess
+          $dbg_out .= "added user to blog.";
+        } else {
+          $dbg_out .= " couldnt add user, id: { ".$userid. " } ";
+        }
+      }
+  } else {
+    $dbg_out .= "ERROR! ";
+  }
+  //getting post
+  $post = get_post( $entry['post_id'] );
+
+
+  //changing post content
+  $post->post_content .= $dbg_out."<br>" ;
+
+  //updating post
+  wp_update_post( $post );
 }
 
-// add the shortcode to search for today.
 
+
+// add the shortcode to search for today.
 if (!function_exists('eai_gravityview_today')) {
 	function eai_gravityview_today( $atts ) {
 		$atts = shortcode_atts( array(
