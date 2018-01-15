@@ -115,15 +115,13 @@ function eai_add_email($entry, $form) {
   } else {
     $dbg_out .= "ERROR! ";
   }
-  //getting post
+  /* for debugging
+  // getting post
   $post = get_post( $entry['post_id'] );
-
-
-  //changing post content
+  // changing post content
   $post->post_content .= $dbg_out."<br>" ;
-
-  //updating post
-  wp_update_post( $post );
+  // updating post
+  wp_update_post( $post );*/
 }
 
 
