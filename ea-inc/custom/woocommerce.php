@@ -34,8 +34,7 @@ add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 
   /*  change the out of stock notifications for early bird & pj sale
   */
-  //add_filter('woocommerce_get_availability_text', 'reach_get_avail_text', 10, 2);
-
+  add_filter('woocommerce_get_availability_text', 'reach_get_avail_text', 10, 2);
   function reach_get_avail_text($text, $product) {
       $id = $product->get_id();
 
@@ -45,6 +44,9 @@ add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
           }
           if ($id == 1483) {
             $text = 'Available 6am-8am <br> Nov 4th'; // american early bird sale
+          }
+          if ($id == 3599) {
+            $text = 'Available on Jan 20th'; // 20 on 20th.
           }
       }
       return $text;
