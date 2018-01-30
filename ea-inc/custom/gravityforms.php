@@ -63,7 +63,8 @@ function eai_validate_useremail ( $validation_result) {
 }
 
 //   add email for registration form
-add_action( 'gform_after_submission_5', 'eai_add_email', 10, 2 );
+// form 7
+add_action( 'gform_after_submission_7', 'eai_add_email', 10, 2 );
 function eai_add_email($entry, $form) {
   $dbg_out = "";
   // get the email from the entry (field number 2)
