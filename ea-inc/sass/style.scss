@@ -33,6 +33,19 @@ Version: 1.8
 .widget .textwidget .eai-right-rail  {
 	padding-bottom: 15px;
 }
+.widget.eai-show-submenu.widget_nav_menu  {
+	ul li ul.sub-menu {
+		display: block;
+	}
+	ul li.menu-item-has-children > a {
+		color: $rate-card-button-color;
+	}
+}
+.eai-ad-rate-button a {
+	background-color: $rate-card-button-color;
+	color: white!important;
+	text-align: center;
+}
 
 .eai-boxed-column{ //styling three boxes on Obits & Death Notices page
 		.wpb_wrapper {
