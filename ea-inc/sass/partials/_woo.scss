@@ -1,0 +1,9 @@
+/* woocommerce styling */
+
+.quantity.hidden.buttons_added {
+  margin-right: 0px;
+  .plus,
+  .minus {
+    display: none;
+  }
+}
