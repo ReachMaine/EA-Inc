@@ -35,7 +35,7 @@
 		wp_register_script( 'jquery-cookie', $woocommerce->plugin_url() . '/assets/js/jquery-cookie/jquery_cookie' . $suffix . '.js', array( 'jquery' ), '1.3.1', true );
 
 	} */
-	// zig  
+	// zig
 	//enqueue the init script for broadstreet.
-	wp_enqueue_script( 'broadstreet', '//cdn.broadstreetads.com/init.js');
+	//wp_enqueue_script( 'broadstreet', '//cdn.broadstreetads.com/init.js');
 ?>
