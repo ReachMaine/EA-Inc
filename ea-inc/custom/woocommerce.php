@@ -48,6 +48,9 @@ add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
           if ($id == 3599) {
             $text = 'Available on Jan 20th'; // 20 on 20th.
           }
+          if ($id == 645) {
+            $text = 'Deadline for submission has past.'; // 20 on 20th.
+          }
       }
       return $text;
   }
