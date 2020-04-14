@@ -39,6 +39,18 @@ body .gform_wrapper {
               font-size: 1em;
             }
         }
+        li.gfield.reach_gf_hide_sublabel { // hide the subfield label
+          .ginput_complex {
+            label {
+              display: none;
+            }
+          }
+        }
+        li.gfield.gsection.reach_gf_topbot_tight {
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+
       }
 
       .eainc-file-upload-box .gform_drop_area {
