@@ -60,5 +60,5 @@ add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
   add_action( 'woocommerce_after_checkout_form', 'eai_checkout_message', 10 );
 
   function eai_checkout_message( ) {
-   echo '<div class="eai-checkout-message"><h3>If you have trouble placing your order, please send an email to <a target="_blank"  href="mailto:dtucker@mdislander.com">dtucker@mdislander.com</a> or call <a href="tel:2072880556">(207) 288-0556</a>.</h3></div>';
+   echo '<div class="eai-checkout-message"><h3>If you have trouble placing your order, please send an email to <a target="_blank"  href="mailto:kwescott@ellsworthamerican.com">kwescott@ellsworthamerican.com</a> or call <a href="tel:2072880556">(207) 667-2576</a>.</h3></div>';
   }
