@@ -18,7 +18,7 @@ function custom_woocommerce_checkout_fields( $fields ) {
 }
 
 //
-add_action( 'woocommerce_email_before_order_table', 'add_order_email_instructions', 10, 2 );
+//add_action( 'woocommerce_email_before_order_table', 'add_order_email_instructions', 10, 2 );
 function add_order_email_instructions( $order, $sent_to_admin ) {
   if ( ! $sent_to_admin ) {
        echo '<p>If your order includes a digital subscription, you will receive a separate email with your password by the 17th.</p>';
@@ -62,3 +62,8 @@ add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
   function eai_checkout_message( ) {
    echo '<div class="eai-checkout-message"><h3>If you have trouble placing your order, please send an email to <a target="_blank"  href="mailto:kwescott@ellsworthamerican.com">kwescott@ellsworthamerican.com</a> or call <a href="tel:2072880556">(207) 667-2576</a>.</h3></div>';
   }
+
+  function remove_product_zoom_support() {
+      remove_theme_support( 'wc-product-gallery-zoom' );
+  }
+  add_action( 'wp', 'remove_product_zoom_support', 100 );
