@@ -65,6 +65,10 @@ body .gform_wrapper {
       input[type="checkbox"] {
         margin-bottom: 0px;
       }
+    }// gform_body
+    .gform_footer {
+      display: flex;
+      justify-content: flex-end;
     }
     .gform_page_footer {
         .gform_save_link { // save and continue button
